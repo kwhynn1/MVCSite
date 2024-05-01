@@ -1,0 +1,191 @@
+/* _content/Project/Views/Products/ProductDetails.cshtml.rz.scp.css */
+body[b-vxwdnoqg17] {
+    background-image: linear-gradient(to right bottom, #b91eda, #a02ae0, #8234e5, #5d3be8, #1241eb);
+
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+main[b-vxwdnoqg17] {
+    max-width: 320px;
+    margin: 5% auto;
+}
+
+.card[b-vxwdnoqg17] {
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.3);
+    transition: 200ms;
+    background: #fff;
+}
+
+.card .card__title[b-vxwdnoqg17] {
+        display: flex;
+        align-items: center;
+        padding: 30px 40px;
+    }
+
+.card .card__title .icon[b-vxwdnoqg17] {
+            flex: 1 0 10px;
+            background: #115dd8;
+            color: #fff;
+            padding: 10px 10px;
+            transition: 200ms;
+        }
+
+.card .card__body[b-vxwdnoqg17] {
+        padding: 0 40px;
+        display: flex;
+        flex-flow: row no-wrap;
+        margin-bottom: 25px;
+    }
+
+.card .card__body > .half[b-vxwdnoqg17] {
+            box-sizing: border-box;
+            padding: 0 15px;
+            flex: 1 0 50%;
+        }
+
+.card .card__body .featured_text p[b-vxwdnoqg17] {
+            margin: 0;
+            padding: 0;
+        }
+
+.card .card__body .featured_text p.sub[b-vxwdnoqg17] {
+                font-family: "Montserrat", sans-serif;
+                font-size: 26px;
+                text-transform: uppercase;
+                color: #686e77;
+                font-weight: 300;
+                margin-bottom: 5px;
+            }
+
+.card .card__body .featured_text p.price[b-vxwdnoqg17] {
+                font-family: "Fjalla One", sans-serif;
+                color: #252525;
+                font-size: 26px;
+            }
+
+.card .card__body .image[b-vxwdnoqg17] {
+            padding-top: 15px;
+            width: 80%;
+        }
+
+.card .card__body .image img[b-vxwdnoqg17] {
+                display: block;
+                max-width: 100%;
+                height: auto;
+            }
+
+.card .card__body .description[b-vxwdnoqg17] {
+            margin-bottom: 25px;
+        }
+
+.card .card__body .description p[b-vxwdnoqg17] {
+                margin: 0;
+                font-family: "Open Sans", sans-serif;
+                font-weight: 300;
+                line-height: 27px;
+                font-size: 16px;
+                color: #555;
+            }
+
+.card .card__body span.stock[b-vxwdnoqg17] {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 600;
+            color: #a1cc16;
+        }
+
+.card .card__footer[b-vxwdnoqg17] {
+        padding: 30px 40px;
+        display: flex;
+        flex-flow: row no-wrap;
+        align-items: center;
+        position: relative;
+    }
+
+.card .card__footer .recommend[b-vxwdnoqg17] {
+            flex: 1 0 10px;
+        }
+
+.card .card__footer .recommend p[b-vxwdnoqg17] {
+                margin: 0;
+                font-family: "Montserrat", sans-serif;
+                text-transform: uppercase;
+                font-weight: 600;
+                font-size: 14px;
+                color: #555;
+            }
+
+.card .card__footer .recommend h3[b-vxwdnoqg17] {
+                margin: 0;
+                font-size: 20px;
+                font-family: "Montserrat", sans-serif;
+                font-weight: 600;
+                text-transform: uppercase;
+                color: #115dd8;
+            }
+
+.card .card__footer .action button[b-vxwdnoqg17] {
+            cursor: pointer;
+            border: 1px solid #115dd8;
+            padding: 14px 30px;
+            border-radius: 200px;
+            color: #fff;
+            background: #115dd8;
+            font-family: "Open Sans", sans-serif;
+            font-size: 16px;
+            transition: 200ms;
+        }
+
+.card .card__footer .action button:hover[b-vxwdnoqg17] {
+                background: #fff;
+                color: #115dd8;
+            }
+/* _content/Project/Views/Shared/_Layout.cshtml.rz.scp.css */
+/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-9q8ibpt6yd] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-9q8ibpt6yd] {
+  color: #0077cc;
+}
+
+.btn-primary[b-9q8ibpt6yd] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-9q8ibpt6yd], .nav-pills .show > .nav-link[b-9q8ibpt6yd] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-9q8ibpt6yd] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-9q8ibpt6yd] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-9q8ibpt6yd] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-9q8ibpt6yd] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-9q8ibpt6yd] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}

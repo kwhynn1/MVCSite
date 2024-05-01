@@ -1,0 +1,92 @@
+﻿@model IEnumerable<Product>
+
+@{
+    ViewData["Title"] = "List of Movies";
+}
+<div class=" mb-5">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <div class="dropdown show">
+                    <a class="btn btn-secondary dropdown-toggle mr-20" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false ">
+                        Category
+                    </a>
+
+                    <div class="dropdown-menu"  aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="https://localhost:44327/Products/Display?searchCategory=Girl">Girl</a>
+                        <a class="dropdown-item" href="https://localhost:44327/Products/Display?searchCategory=Boy">Boy</a>
+                        <a class="dropdown-item" href="https://localhost:44327/Products/Display?searchCategory=Men">Men</a>
+                        <a class="dropdown-item" href="https://localhost:44327/Products/Display?searchCategory=Ladies">Women</a>
+                    </div>
+                </div>
+
+            </ul>
+
+        </div>
+
+        <form asp-controller="Products" asp-action="Display" method="get">
+            <p>
+                <input type="text" name="SearchString" />
+                <input type="submit" value="Search" />
+                <a asp-controller="Products" asp-action="Display">Undo Search</a>
+            </p>
+            
+        </form>
+        
+    </nav>
+
+</div>
+
+<div>
+    <div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-4 col-xs-6 border-primary mb-3">
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-6">
+                            <img src="@item.ImageURL" width="100%" alt="@item.ProductName.ToLower()">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-body">
+                                <p class="card-text"><b>Name: </b>@item.ProductName.ToLower()</p>
+                                <p class="card-text"><b>Category: </b>@item.ProductCategory.ToLower()</p>
+                            <p class="card-text"><b>Price: </b>£@item.ProductPrice</p>
+                            <p class="card-text ">
+                                <b>Status: </b>
+                                @if (item.ProductQuantity > 0)
+                                {
+                                    <span class="badge bg-success text-white">AVAILABLE</span>
+                                }
+                                else if (item.ProductQuantity == 0)
+                                {
+                                    <span class="badge bg-danger text-white">OUT OF STOCK</span>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-primary text-white">UPCOMING</span>
+                                }
+                            </p>
+
+                        </div>
+                    </div>
+                   <div class="col-md-12">
+                        <div class="card-footer ">
+                            <p class="card-text">
+                                    <a class="btn btn-outline-primary float-right @((item.ProductQuantity == 0) ? "disabled" : "")" asp-action="ProductDetails" asp-route-id="@item.ID"> <i class="bi bi-eye-fill"></i> Show Details </a>
+                                    <a class="btn btn-success text-white @((item.ProductQuantity == 0) ? "disabled" : "")" asp-controller="Orders" asp-action="AddToShoppingCart" asp-route-id="@item.ID">
+                                        <i class="bi bi-cart-plus"></i> Add to Cart (Price @item.ProductPrice.ToString("c"))
+                                </a>
+                            </p>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        
+ 
+    </div>
+
+
+
+}

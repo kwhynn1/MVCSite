@@ -1,0 +1,36 @@
+﻿@model Project.Models.Product
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="card">
+    <div class="card__title">
+            <a asp-action="Display"><i class="bi bi-arrow-return-left"></i></a>
+    </div>
+    <div class="card__body">
+        <div class="half">
+            <div class="featured_text">
+                <h1>@Html.DisplayFor(model => model.ProductName)</h1>
+            </div>
+            <div class="image">
+                <img src="@Html.DisplayFor(model => model.ImageURL)" alt="@Html.DisplayFor(model => model.ProductName)">
+            </div>
+        </div>
+        <div class="half">
+            <div class="description">
+                <p class="price">£@Html.DisplayFor(model => model.ProductPrice)</p>
+                <p>@Html.DisplayFor(model => model.ProductDescription)</p>
+            </div>
+            <span class="stock"><i class="fa fa-pen"></i> In stock</span>
+
+        </div>
+    </div>
+    <div class="card__footer">
+        <div class="recommend">
+        </div>
+        <div class="action">
+            <button type="button" asp-controller="Orders" asp-action="AddToShoppingCart" asp-route-id="@Model.ID">Add to cart</button>
+        </div>
+    </div>
+</div>
